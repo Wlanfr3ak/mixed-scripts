@@ -10,7 +10,7 @@ apt-get upgrade -y
 apt-get dist-upgrade -y
 apt-get install -y  htop curl sudo git
 curl -sL https://deb.nodesource.com/setup_8.x | sudo bash -
-sudo apt install nodejs
+sudo apt install -y nodejs
 node --version
 git clone https://github.com/holzmaster/node-pr0gramm-miner
 cd node-pr0gramm-miner
