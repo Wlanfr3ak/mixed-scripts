@@ -8,7 +8,7 @@
 apt-get update
 apt-get upgrade
 apt-get dist-upgrade
-apt-get install htop curl sudo git
+apt-get install -y  htop curl sudo git
 curl -sL https://deb.nodesource.com/setup_8.x | sudo bash -
 sudo apt install nodejs
 node --version
