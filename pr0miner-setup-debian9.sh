@@ -5,9 +5,9 @@
 # Howto:
 # Use "chmod +x pr0miner-setup-debian9.sh" to make it executable and start it with "./pr0miner-setup-debian9.sh"
 # After the Start the Script directly starts mining
-apt-get update
-apt-get upgrade
-apt-get dist-upgrade
+apt-get update -y
+apt-get upgrade -y
+apt-get dist-upgrade -y
 apt-get install -y  htop curl sudo git
 curl -sL https://deb.nodesource.com/setup_8.x | sudo bash -
 sudo apt install nodejs
