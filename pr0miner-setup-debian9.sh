@@ -19,4 +19,7 @@ npm i
 ##
 # Add your personal Data here, you can find it under: https://pr0gramm.com/api/user/minerauth
 # 
-./miner.js -u <pr0username> -t <tokenid> -j <threadanzahl> -a -v
+while true
+do
+  ./miner.js -u <pr0username> -t <tokenid> -j <threadanzahl> -a -v
+done
