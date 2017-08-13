@@ -22,7 +22,11 @@ cd /etc/letsencrypt/live/$dn/
 cp fullchain.pem /etc/pve/local/pve-ssl.pem
 cp privkey.pem /etc/pve/local/pve-ssl.key
 cp chain.pem /etc/pve/pve-root-ca.pem
-pvecm updatecerts
+# doesnt work leave feedback please
+#pvecm updatecerts
+
+service pveproxy restart
+service pvedaemon restart
 
 # renew script
 cd /root/
@@ -35,7 +39,10 @@ rm -rf /etc/pve/pve-root-ca.pem
 cp /etc/letsencrypt/live/$dn/fullchain.pem  /etc/pve/local/pve-ssl.pem
 cp /etc/letsencrypt/live/$dn/privkey.pem /etc/pve/local/pve-ssl.key
 cp /etc/letsencrypt/live/$dn/chain.pem /etc/pve/pve-root-ca.pem
-pvecm updatecerts
+# doesnt work leave feedback please
+#pvecm updatecerts
+service pveproxy restart
+service pvedaemon restart
 EOF
 
 # make it executable and push to /etc/crontab
