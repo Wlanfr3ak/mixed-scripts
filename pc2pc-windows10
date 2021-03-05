@@ -1,12 +1,17 @@
-Direct connect between 2 PCs over a second Network Card ( 2,5 GBe 10GB etc.)
+Direct connect between 2 PCs over a second Network Card (2,5 GBe or 10 GBe etc.)
 
-1. Build in Network Cards and Install newest NATIVE driver (no Software bullshit)
-2. Connect the to Cards with an Network Cable (no CAT5e or similiar Bullshit!)
-3. PC1: IP-Address: 192.168.240.1 Netmask: 255.255.255.0 Gateway: - DNS: - 
-4. PC2: IP-Address: 192.168.240.2 Netmask: 255.255.255.0 Gateway: - DNS: -
+1. Build in Network Cards and Install newest "NATIVE" driver
+2. Connect the too Cards with an Network Cable (no CAT5e or similiar Bullshit!)
+3. PC1: IP-Address: 192.168.240.1 Netmask: 255.255.255.0 Gateway: - DNS: - / you can use IPv6 in the same way
+4. PC2: IP-Address: 192.168.240.2 Netmask: 255.255.255.0 Gateway: - DNS: - / you can use IPv6 in the same way
+
+Group Policies / Firewall Rules (on both PCs!)
 5. Press the Button with the "Flag of Pain"(WinKey) and enter gpedit.msc and open it by pressing enter.
-6. Goto -> Computer Configuration -> Windows-Settings -> Securitysettings -> NetworklistManagerLists
-7. Under the Set of "Not identified Networks" change the first rule to "Private" and the Second to yes value
-8. Goto Windows Firewall Settings -> Add Rule -> Direclty Connected PCs -> rule based on ip network 192.168.240.0/24 and all ports
+6. "Computer Configuration" -> "Windows Settings" -> Security Settings -> "Network List Manager Policies"
+7. Under the Set of "Unidentified Networks" change "Location typ" to "Private" and "User permissions" to "User can change location"
+8. Press the Button with the "Flag of Pain"(WinKey) and enter Firewall and open it by pressing enter.
+9. In the left Side Menu "Advanced Settings" "Connection Security Rules" "New Rule" "Custom" "These IP Addresses" "192.168.240.0/24" and the same for second field.
+10. "Do not Authenticate"  "Protocol any" and leave all types activated and set the rule name. 
 
 Finish
+test it with ping the other side and viceversa 
