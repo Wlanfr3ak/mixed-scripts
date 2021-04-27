@@ -1,4 +1,5 @@
 #!/bin/bash
+# Use the speedtest.sh from this repo in same folder!
 # ASCI Art
 # brew install toilet libcaca wget iperf3
 echo "---------------------------------------------------------------"
