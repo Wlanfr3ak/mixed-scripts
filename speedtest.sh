@@ -1,1 +1,4 @@
-Iperf3 kram
+#!/bin/bash
+#Iperf3 kram
+datetime=$(date %F-%H-%M)
+./makespeedtest.sh | tee $datetime.txt
