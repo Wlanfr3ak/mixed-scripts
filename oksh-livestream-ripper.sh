@@ -3,6 +3,29 @@
 # Needed ffmpeg installed!
 # Script captures Livestream and write it to .mkv in Folder, if disconnect etc. it will start again with new file name.
 
+# systemd daemon for autorecording
+# nano /etc/systemd/system/oksh-ripper.service
+#
+#[Unit]
+#Description=Oksh Ripper Service
+#After=network.target
+#
+#[Service]
+#Type=simple
+#Restart=always
+#RestartSec=3
+#User=root
+#ExecStart=/path/to/script.sh
+#
+#[Install]
+#WantedBy=multi-user.target
+#
+#systemctl daemon-reload
+#systemctl start oksh-ripper.service
+#systemctl status oksh-ripper.service
+#systemctl enable oksh-ripper.service
+# then the service should run for you
+
 # Offener Kanal Kiel
 STREAM_URL="http://live.oksh.de:8888/play/hls/kieltv/index.m3u8"
 # Offener Kanal Flensburg
