@@ -11,4 +11,4 @@ done
 
 # Special: Thermal Video over Normal Video:
 # ffmpeg -i YUN_0201.mp4 -filter_complex "[0:v:0]setpts=PTS-STARTPTS, scale=1920x1080[untere]; [0:v:1]setpts=PTS-STARTPTS, scale=800x600[obere]; [untere][obere]overlay=x=(main_w-overlay_w)/2:y=(main_h-overlay_h)/2" -c:v h264_videotoolbox output_video-appple.mp4
-# ffmpeg -i YUN_0201.mp4 -filter_complex "[0:v:0]setpts=PTS-STARTPTS, scale=1920x1080[untere]; [0:v:1]setpts=PTS-STARTPTS, scale=800x600[obere]; [untere][obere]overlay=x=(main_w-overlay_w)/2:y=(main_h-overlay_h)/2" -c:v libx264 output_video-appple.mp4
+# ffmpeg -i YUN_0201.mp4 -filter_complex "[0:v:0]setpts=PTS-STARTPTS, scale=1920x1080[untere]; [0:v:1]setpts=PTS-STARTPTS, scale=800x600[obere]; [untere][obere]overlay=x=(main_w-overlay_w)/2:y=(main_h-overlay_h)/2" -c:v libx264 output_video.mp4
