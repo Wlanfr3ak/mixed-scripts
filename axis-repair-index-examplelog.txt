@@ -1,0 +1,56 @@
+PS D:\> python.exe .\axis-repair-index.py .\20260215_100000_0DF7_ACCC8EE56B83.mkv .\20260215_100000_0DF7_ACCC8EE56B83-fixed-py.mkv
+Checking ffmpeg installation...
+✓ ffmpeg found and available
+Starting repair of '.\20260215_100000_0DF7_ACCC8EE56B83.mkv'...
+Output file: '.\20260215_100000_0DF7_ACCC8EE56B83-fixed-py.mkv'
+This process may take several minutes...
+ffmpeg version 8.0.1-full_build-www.gyan.dev Copyright (c) 2000-2025 the FFmpeg developers
+  built with gcc 15.2.0 (Rev8, Built by MSYS2 project)
+  configuration: --enable-gpl --enable-version3 --enable-static --disable-w32threads --disable-autodetect --enable-fontconfig --enable-iconv --enable-gnutls --enable-lcms2 --enable-libxml2 --enable-gmp --enable-bzlib --enable-lzma --enable-libsnappy --enable-zlib --enable-librist --enable-libsrt --enable-libssh --enable-libzmq --enable-avisynth --enable-libbluray --enable-libcaca --enable-libdvdnav --enable-libdvdread --enable-sdl2 --enable-libaribb24 --enable-libaribcaption --enable-libdav1d --enable-libdavs2 --enable-libopenjpeg --enable-libquirc --enable-libuavs3d --enable-libxevd --enable-libzvbi --enable-liboapv --enable-libqrencode --enable-librav1e --enable-libsvtav1 --enable-libvvenc --enable-libwebp --enable-libx264 --enable-libx265 --enable-libxavs2 --enable-libxeve --enable-libxvid --enable-libaom --enable-libjxl --enable-libvpx --enable-mediafoundation --enable-libass --enable-frei0r --enable-libfreetype --enable-libfribidi --enable-libharfbuzz --enable-liblensfun --enable-libvidstab --enable-libvmaf --enable-libzimg --enable-amf --enable-cuda-llvm --enable-cuvid --enable-dxva2 --enable-d3d11va --enable-d3d12va --enable-ffnvcodec --enable-libvpl --enable-nvdec --enable-nvenc --enable-vaapi --enable-libshaderc --enable-vulkan --enable-libplacebo --enable-opencl --enable-libcdio --enable-openal --enable-libgme --enable-libmodplug --enable-libopenmpt --enable-libopencore-amrwb --enable-libmp3lame --enable-libshine --enable-libtheora --enable-libtwolame --enable-libvo-amrwbenc --enable-libcodec2 --enable-libilbc --enable-libgsm --enable-liblc3 --enable-libopencore-amrnb --enable-libopus --enable-libspeex --enable-libvorbis --enable-ladspa --enable-libbs2b --enable-libflite --enable-libmysofa --enable-librubberband --enable-libsoxr --enable-chromaprint --enable-whisper
+  libavutil      60.  8.100 / 60.  8.100
+  libavcodec     62. 11.100 / 62. 11.100
+  libavformat    62.  3.100 / 62.  3.100
+  libavdevice    62.  1.100 / 62.  1.100
+  libavfilter    11.  4.100 / 11.  4.100
+  libswscale      9.  1.100 /  9.  1.100
+  libswresample   6.  1.100 /  6.  1.100
+Input #0, matroska,webm, from '.\20260215_100000_0DF7_ACCC8EE56B83.mkv':
+  Metadata:
+    encoder         : GStreamer matroskamux version 1.14.0
+    creation_time   : 2026-03-01T08:57:39.000000Z
+  Duration: N/A, start: 0.000000, bitrate: N/A
+  Stream #0:0(eng): Video: h264 (High), yuvj420p(pc, bt709, progressive), 1920x1080 [SAR 1:1 DAR 16:9], 50 fps, 50 tbr, 1k tbn (default)
+    Metadata:
+      title           : Video
+  Stream #0:1(eng): Audio: aac (LC), 48000 Hz, stereo, fltp, start 0.010000 (default)
+    Metadata:
+      title           : Audio
+Stream mapping:
+  Stream #0:0 -> #0:0 (copy)
+  Stream #0:1 -> #0:1 (copy)
+Output #0, matroska, to '.\20260215_100000_0DF7_ACCC8EE56B83-fixed-py.mkv':
+  Metadata:
+    encoder         : Lavf62.3.100
+  Stream #0:0(eng): Video: h264 (High) (H264 / 0x34363248), yuvj420p(pc, bt709, progressive), 1920x1080 [SAR 1:1 DAR 16:9], q=2-31, 50 fps, 50 tbr, 1k tbn (default)
+    Metadata:
+      title           : Video
+  Stream #0:1(eng): Audio: aac (LC) ([255][0][0][0] / 0x00FF), 48000 Hz, stereo, fltp (default)
+    Metadata:
+      title           : Audio
+Press [q] to stop, [?] for help
+frame=10116 fps=0.0 q=-1.0 size=  216064KiB time=00:03:22.31 bitrate=8748.8kbits/s speed= 391x elapsed=0:00:00.51
+frame=20156 fps=19437 q=-1.0 size=  434944KiB time=00:06:43.19 bitrate=8837.2kbits/s speed= 389x elapsed=0:00:01.03
+frame=31768 fps=20396 q=-1.0 size=  642048KiB time=00:10:35.27 bitrate=8279.3kbits/s speed= 408x elapsed=0:00:01.55
+frame=42228 fps=20470 q=-1.0 size=  843264KiB time=00:14:04.64 bitrate=8178.6kbits/s speed= 409x elapsed=0:00:02.06
+frame=53462 fps=20713 q=-1.0 size= 1053952KiB time=00:17:49.07 bitrate=8076.1kbits/s speed= 414x elapsed=0:00:02.58
+frame=64176 fps=20695 q=-1.0 size= 1270272KiB time=00:21:23.60 bitrate=8106.9kbits/s speed= 414x elapsed=0:00:03.10
+frame=74897 fps=20755 q=-1.0 size= 1477632KiB time=00:24:57.94 bitrate=8080.9kbits/s speed= 415x elapsed=0:00:03.60
+frame=86167 fps=20857 q=-1.0 size= 1699072KiB time=00:28:43.26 bitrate=8077.0kbits/s speed= 417x elapsed=0:00:04.13
+frame=96959 fps=20894 q=-1.0 size= 1916928KiB time=00:32:19.05 bitrate=8098.5kbits/s speed= 418x elapsed=0:00:04.64
+[out#0/matroska @ 000001730267a400] video:2069827KiB audio:0KiB subtitle:0KiB other streams:0KiB global headers:0KiB muxing overhead: 0.039838%
+frame=105029 fps=21026 q=-1.0 Lsize= 2070652KiB time=00:35:00.60 bitrate=8075.2kbits/s speed= 421x elapsed=0:00:04.99
+
+✓ Repair completed successfully!
+Repaired file: .\20260215_100000_0DF7_ACCC8EE56B83-fixed-py.mkv
+Original size: 2054.1 MB
+Repaired size: 2022.1 MB
