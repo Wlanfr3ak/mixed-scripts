@@ -3,7 +3,7 @@
 MKV Index Repair Tool
 Author: Windsurf IDE
 Description: This script repairs the index of MKV files that cannot be properly skipped/seeked.
-It uses ffmpeg to remux the container and create a proper index.
+It uses ffmpeg with audio re-encoding to remux the container and create a proper index with working audio.
 
 Requirements:
 - ffmpeg must be installed and available in the system PATH
@@ -16,6 +16,11 @@ Example:
     python axis-repair-index.py "D:\video_broken.mkv" "D:\video_fixed.mkv"
 
 Note: This script works on both Windows and Linux platforms.
+Features:
+- Repairs MKV index for proper seeking/skipping
+- Fixes audio timing issues through re-encoding
+- Preserves video quality (video stream copy)
+- Converts audio to AAC for maximum compatibility
 """
 
 import sys
@@ -45,6 +50,7 @@ def check_ffmpeg():
 def repair_mkv_index(input_file, output_file):
     """
     Repair the index of an MKV file by remuxing with ffmpeg.
+    Uses audio re-encoding to fix timing issues and ensure proper audio playback.
     
     Args:
         input_file (str): Path to the broken MKV file
@@ -72,15 +78,24 @@ def repair_mkv_index(input_file, output_file):
             print(f"Error creating output directory: {e}")
             return False
     
-    # Build ffmpeg command
-    # -c copy: Stream copy (no re-encoding, very fast)
-    # -map 0: Copy all streams from input
+    # Build ffmpeg command with audio re-encoding
+    # This approach fixes timing issues and ensures proper audio playback
+    # -c:v copy: Copy video stream without re-encoding (preserves quality)
+    # -c:a aac: Re-encode audio to AAC (fast, compatible, fixes timing)
+    # -ar 48000: Set audio sample rate to 48kHz (standard)
+    # -ab 128k: Set audio bitrate to 128kbps (good quality)
+    # -map 0:v -map 0:a: Explicitly map video and audio streams
     # -avoid_negative_ts make_zero: Fix timestamp issues
+    print("Using audio re-encoding to fix timing issues and ensure proper audio...")
     cmd = [
         'ffmpeg',
         '-i', input_file,
-        '-c', 'copy',
-        '-map', '0',
+        '-c:v', 'copy',
+        '-c:a', 'aac',
+        '-ar', '48000',
+        '-ab', '128k',
+        '-map', '0:v',
+        '-map', '0:a',
         '-avoid_negative_ts', 'make_zero',
         '-y',  # Overwrite existing output file
         output_file
